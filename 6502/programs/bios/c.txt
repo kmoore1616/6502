@@ -1,0 +1,2 @@
+ca65 wozmon.s -o tmp/6502.o
+ld65 -C config.cfg tmp/6502.o -o tmp/6502.bin -Ln tmp/6502.lbl
