@@ -1,2 +1,2 @@
-# 6502
-A place to organize my code for beneater's 6502 kit https://eater.net/6502
+#6502
+This project involves constructing a fully functional retro computer using the 6502 CPU, a classic yet straightforward microprocessor. Over several months, I built the computer from the ground up, learning key concepts in low-level computing and hardware design. The computer is capable of communicating with a terminal to display text. This project has allowed me to explore the fundamentals of computer architecture while developing hands-on skills in system design and troubleshooting. Kit based on beneater's 6502 computer series: https://eater.net/6502
