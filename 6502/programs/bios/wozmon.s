@@ -1,3 +1,5 @@
+; I DID NOT WRITE THIS CODE. See https://eater.net/6502
+
 .setcpu "65C02"
 .debuginfo
 .segment "WOZMON"
