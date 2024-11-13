@@ -4,5 +4,5 @@ This project involves constructing a fully functional retro computer using the 6
 # Running the project
 Without the specific hardware, running any of the files is tricky. To do so download this emulator: https://github.com/sethm/symon. The actual machine code is located in programs/bios/tmp/6502.bin. Change the emulators settings by: Simulator/Switch emulated machine/Beneater and Simulator/CPU/65C02. Then go to File/Load ROM and select the 6502.bin
 
-![alt text](https://github.com/kmoore1616/6502/tree/main/images/Moniter.jpg?raw=true)
-![alt text](https://github.com/kmoore1616/6502/tree/main/images/BBoard.jpg?raw=true)
+![Moniter](https://github.com/user-attachments/assets/322d4855-9151-4271-8007-4724e68f98eb)
+![BBoard](https://github.com/user-attachments/assets/da5c72e0-e38a-4d2f-9732-108b72cee35d)
