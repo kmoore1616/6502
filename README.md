@@ -8,3 +8,5 @@ Without the specific hardware, running any of the files is tricky. To do so down
 
 ![Moniter](https://github.com/user-attachments/assets/322d4855-9151-4271-8007-4724e68f98eb)
 ![BBoard](https://github.com/user-attachments/assets/da5c72e0-e38a-4d2f-9732-108b72cee35d)
+![PCB](https://github.com/user-attachments/assets/b6a86ed6-6c36-4667-bbdf-844a3c4bc272)
+![Cassette](https://github.com/user-attachments/assets/57b08568-40e7-42c2-8647-6d3640ccd513)
