@@ -7,9 +7,9 @@
 # Requires Python 3.1.2 or newer
 
 """
-Takes the contents of a text file and encodes it into a Kansas
-City Standard WAV file, that when played will upload data via the
-cassette tape input on various vintage home computers. See
+Takes whitespace-separated hexadecimal bytes and encodes them into a
+Kansas City Standard WAV file that can upload data through the cassette
+input on various vintage home computers. See
 http://en.wikipedia.org/wiki/Kansas_City_standard
 """
 
@@ -24,8 +24,8 @@ AMPLITUDE = 128        # Amplitude of generated square waves
 CENTER    = 128        # Center point of generated waves
 
 # Create a single square wave cycle of a given frequency 
-def make_square_wave(freq,framerate):
-    n = int(framerate/freq/2)
+def make_square_wave(freq, framerate):
+    n = int(framerate / freq / 2)
     return bytearray([CENTER-AMPLITUDE//2])*n + \
            bytearray([CENTER+AMPLITUDE//2])*n
 
@@ -52,8 +52,8 @@ def kcs_encode_byte(byteval):
 
 # Write a WAV file with encoded data. leader and trailer specify the
 # number of seconds of carrier signal to encode before and after the data
-def kcs_write_wav(filename,data,leader,trailer):
-    w = wave.open(filename,"wb")
+def kcs_write_wav(filename, data, leader, trailer):
+    w = wave.open(filename, "wb")
     w.setnchannels(1)
     w.setsampwidth(1)
     w.setframerate(FRAMERATE)
@@ -75,15 +75,14 @@ def kcs_write_wav(filename,data,leader,trailer):
 if __name__ == '__main__':
     import sys
     if len(sys.argv) != 3:
-        print("Usage : %s infile outfile" % sys.argv[0],file=sys.stderr)
+        print("Usage: %s infile outfile" % sys.argv[0], file=sys.stderr)
         raise SystemExit(1)
 
     in_filename = sys.argv[1]
     out_filename = sys.argv[2]
-    data = open(in_filename,"r").read()
-    data = data.replace('\n','\r\n')         # Fix line endings
-    rawdata = bytearray.fromhex(data)
-    kcs_write_wav(out_filename,rawdata,5,5)
+    with open(in_filename, encoding="ascii") as infile:
+        rawdata = bytearray.fromhex(infile.read())
+    kcs_write_wav(out_filename, rawdata, 5, 5)
 
     
 
